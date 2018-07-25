@@ -12,5 +12,4 @@ Credit to contributors at this [Code Charismatic blog post](http://codecharismat
 
 ## Todo
 
-- Add column for total order tax amount
 - Add column for total order discount amount

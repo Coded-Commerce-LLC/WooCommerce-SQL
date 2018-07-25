@@ -53,6 +53,10 @@ SELECT
 	max( CASE WHEN pm.meta_key = '_billing_email' AND p.ID = pm.post_id THEN pm.meta_value END ) AS billing_email,
 	max( CASE WHEN pm.meta_key = '_billing_phone' AND p.ID = pm.post_id THEN pm.meta_value END ) AS billing_phone,
 
+	-- Customer Data Example
+	-- max( CASE WHEN pm.meta_key = '_customer_user' AND p.ID = pm.post_id THEN pm.meta_value END ) AS user_id,
+	-- max( CASE WHEN um.meta_key = 'nickname' THEN um.meta_value END ) AS user_nickname,
+
 	-- Billing
 	max( CASE WHEN pm.meta_key = '_billing_first_name' AND p.ID = pm.post_id THEN pm.meta_value END ) AS billing_first_name,
 	max( CASE WHEN pm.meta_key = '_billing_last_name' AND p.ID = pm.post_id THEN pm.meta_value END ) AS billing_last_name,
@@ -74,6 +78,10 @@ SELECT
 FROM wp_posts p
 	LEFT JOIN wp_postmeta pm ON p.ID = pm.post_id
 	LEFT JOIN wp_woocommerce_order_items oi ON p.ID = oi.order_id
+	
+	-- Customer Data Example
+	-- LEFT JOIN wp_users u ON u.ID = pm.meta_value AND pm.meta_key = '_customer_user'
+	-- LEFT JOIN wp_usermeta um ON um.user_id = u.ID
 
 WHERE post_type = 'shop_order'
 
