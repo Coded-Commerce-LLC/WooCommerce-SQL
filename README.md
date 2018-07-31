@@ -13,3 +13,12 @@ Credit to contributors at this [Code Charismatic blog post](http://codecharismat
 ## Todo
 
 - Add column for total order discount amount
+
+## Author
+
+* **Coded Commerce, LLC** - *Initial work* - [Coded-Commerce-LLC](https://github.com/Coded-Commerce-LLC)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
